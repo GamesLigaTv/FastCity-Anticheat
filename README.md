@@ -1,7 +1,9 @@
-## GamesLigaTv Entwickler-Community [Discord]
-[![Entwickler-Discord](https://discord.com/api/guilds/337790398464524288/widget.png?style=banner4)](https://discord.com/invite/5DSbspA)
+## Paul.GamesLigaTv Entwickler-Community [Discord]
+[![Entwickler-Discord](https://discord.com/api/guilds/337790398464524288/widget.png?style=banner4)](https://discord.com/5DSbspA)
+## Paradox_Jack Entwickler-Community [Discord]
+[![FastCity-Discord](https://discord.com/yZfacB22T22)
 
-##FastCity-Anticheat
+##FastCity-Anticheat 
 FastCity's Official Anticheat [Code-Inspirationen von GamesLigaTv auf GitHub]
 
 ## Was kann es aufhalten?
