@@ -1,8 +1,8 @@
--- Server Config:
-webhookURL = ''
+-- Server Config: discord
+webhookURL = 'Hier Rein'
 
 
--- CODE [DO NOT TOUCH]:
+-- CODE [NICHT BERÜHREN]:
 BlacklistedEvents = Config.BlacklistedEvents;
 
 local counter = {}
@@ -83,17 +83,17 @@ AddEventHandler('Anticheat:ScreenshotSubmit', function()
         local playerLive = ids.live;
         local playerDisc = ids.discord;
         exports['discord-screenshot']:requestCustomClientScreenshotUploadToDiscord(src, webhookURL, screenshotOptions, {
-            username = '[FastCity-ANTICHEAT] https://github.com/JaredScar/FastCity-Anticheat',
-            avatar_url = 'https://forum.cfx.re/user_avatar/forum.cfx.re/officialbadger/120/258293_2.png',
+            username = '[FastCity-ANTICHEAT] https://github.com/GamesLigaTv/FastCity-Anticheat',
+            avatar_url = 'https://i.ibb.co/5hHhSym/FastCity.png',
             content = '',
             embeds = {
                 {
                     color = 16711680,
                     author = {
-                        name = '[BADGER-ANTICHEAT]',
-                        icon_url = 'https://forum.cfx.re/user_avatar/forum.cfx.re/officialbadger/120/258293_2.png'
+                        name = '[FastCity-Anticheat]',
+                        icon_url = 'https://i.ibb.co/5hHhSym/FastCity.png'
                     },
-                    title = '[Possible Modder] Player has triggered blacklisted keys...',
+                    title = '[Möglicher Modder] Spieler hat Schlüssel auf der schwarzen Liste ausgelöst...',
                     description = '**__Player Identifiers:__** \n\n'
                     .. '**Server ID:** `' .. src .. '`\n\n'
                     .. '**Username:** `' .. GetPlayerName(src) .. '`\n\n'
@@ -118,29 +118,29 @@ RegisterCommand('ac-unban', function(source, args, rawCommand)
     if (src <= 0) then
         -- Console unban
         if #args == 0 then 
-            -- Not enough arguments
-            print('^3[^6Badger-Anticheat^3] ^1Not enough arguments...');
+            -- Nicht genug Argumente
+            print('^3[^6FastCity-Anticheat^3] ^1Nicht genügend Argumente...');
             return; 
         end
         local banID = args[1];
         if tonumber(banID) ~= nil then
             local playerName = UnbanPlayer(banID);
             if playerName then
-                print('^3[^6Badger-Anticheat^3] ^0Player ^1' .. playerName 
-                .. ' ^0has been unbanned from the server by ^2CONSOLE');
-                TriggerClientEvent('chatMessage', -1, '^3[^6Badger-Anticheat^3] ^0Player ^1' .. playerName 
-                .. ' ^0has been unbanned from the server by ^2CONSOLE'); 
+                print('^3[^6FastCity-Anticheat^3] ^0Player ^1' .. playerName 
+                .. ' ^0wurde vom Server gesperrt von ^2KONSOLE');
+                TriggerClientEvent('chatMessage', -1, '^3[^6FastCity-Anticheat^3] ^0Player ^1' .. playerName 
+                .. ' ^0wurde vom Server gesperrt von ^2KONSOLE'); 
             else 
                 -- Not a valid ban ID
-                print('^3[^6Badger-Anticheat^3] ^1That is not a valid ban ID. No one has been unbanned!'); 
+                print('^3[^6FastCity-Anticheat^3] ^1Das ist keine gültige Ban-ID. Niemand wurde entbannt!'); 
             end
         end
         return;
     end 
-    if IsPlayerAceAllowed(src, "Badger-Anticheat.ACban") then 
+    if IsPlayerAceAllowed(src, "FastCity-Anticheat.ACban") then 
         if #args == 0 then 
             -- Not enough arguments
-            TriggerClientEvent('chatMessage', src, '^3[^6Badger-Anticheat^3] ^1Not enough arguments...');
+            TriggerClientEvent('chatMessage', src, '^3[^6FastCity-Anticheat^3] ^1Nicht genug Argumente...');
             return; 
         end
         local banID = args[1];
@@ -148,15 +148,15 @@ RegisterCommand('ac-unban', function(source, args, rawCommand)
             -- Is a valid ban ID 
             local playerName = UnbanPlayer(banID);
             if playerName then
-                TriggerClientEvent('chatMessage', -1, '^3[^6Badger-Anticheat^3] ^0Player ^1' .. playerName 
-                .. ' ^0has been unbanned from the server by ^2' .. GetPlayerName(src)); 
+                TriggerClientEvent('chatMessage', -1, '^3[^6FastCity-Anticheat^3] ^0Player ^1' .. playerName 
+                .. ' ^0wurde vom Server gesperrt von ^2' .. GetPlayerName(src)); 
             else 
                 -- Not a valid ban ID
-                TriggerClientEvent('chatMessage', src, '^3[^6Badger-Anticheat^3] ^1That is not a valid ban ID. No one has been unbanned!'); 
+                TriggerClientEvent('chatMessage', src, '^3[^6FastCity-Anticheat^3] ^1Das ist keine gültige Ban-ID. Niemand wurde entbannt!'); 
             end
         else 
             -- Not a valid number
-            TriggerClientEvent('chatMessage', src, '^3[^6Badger-Anticheat^3] ^1That is not a valid number...'); 
+            TriggerClientEvent('chatMessage', src, '^3[^6FastCity-Anticheat^3] ^1Das ist keine gültige Zahl...'); 
         end
     end
 end)
@@ -226,7 +226,7 @@ Citizen.CreateThread(function()
                 playTracker[ip] = 1;
             end
         end
-        Wait((1000 * 60)); -- Every minute 
+        Wait((1000 * 60)); -- Jede Minute 
     end
 end)
 function GetLatest(count)
@@ -279,9 +279,9 @@ RegisterCommand("latest", function(source, args, rawCommand)
     for i = 1, #latestUsers do 
         local user = latestUsers[i][1];
         local playTime = latestUsers[i][2];
-        TriggerClientEvent('chatMessage', source, "^5[^1Badger-Anticheat^5] ^3Player ^3[^4".. tostring(user) .. "^3] ^4" .. 
-            GetPlayerName(user) .. " ^3has played ^4" .. playTime ..
-            " ^3minutes so far...");
+        TriggerClientEvent('chatMessage', source, "^5[^1FastCity-Anticheat^5] ^3Player ^3[^4".. beziehen(user) .. "^3] ^4" .. 
+            GetPlayerName(user) .. " ^3hat gespielt ^4" .. playTime ..
+            " ^3Minuten bisher...");
     end
 end)
 --[[
@@ -291,7 +291,7 @@ Citizen.CreateThread(function()
         for _, id in pairs(GetPlayers()) do 
             if isBanned(id) then 
                 -- Banned, kick em 
-                DropPlayer(id, "[Badger-Anticheat] " .. bans[tostring(playerIP)]);
+                DropPlayer(id, "[FastCity-Anticheat] " .. bans[beziehen(playerIP)]);
             end
         end
     end
@@ -299,7 +299,7 @@ end)
 ]]--
 function OnPlayerConnecting(name, setKickReason, deferrals)
     deferrals.defer();
-    print("[Badger-Anticheat] Checking their Ban Data");
+    print("[FastCity-Anticheat] Überprüfung ihrer Bankdaten");
     local src = source;
     local banned = false;
     local ban = isBanned(src);
@@ -308,12 +308,12 @@ function OnPlayerConnecting(name, setKickReason, deferrals)
         -- They are banned 
         local reason = ban['reason'];
         local printMessage = nil;
-        if string.find(reason, "[Badger-Anticheat]") then 
+        if string.find(reason, "[FastCity-Anticheat]") then 
             printMessage = "" 
         else 
-            printMessage = "[Badger-Anticheat] " 
+            printMessage = "[FastCity-Anticheat] " 
         end 
-        print("[BANNED PLAYER] Player " .. GetPlayerName(src) .. " tried to join, but was banned for: " .. reason);
+        print("[BANNED PLAYER] Player " .. GetPlayerName(src) .. " versuchte mitzumachen, wurde aber gesperrt: " .. reason);
         deferrals.done(printMessage .. "(BAN ID: " .. ban['banID'] .. ") " .. reason);
         banned = true;
         CancelEvent();
@@ -326,12 +326,12 @@ end
 RegisterCommand("acban", function(source, args, raw)
     -- /acban <id> <reason> 
     local src = source;
-    if IsPlayerAceAllowed(src, "Badger-Anticheat.ACban") then 
+    if IsPlayerAceAllowed(src, "FastCity-Anticheat.ACban") then 
         -- They can ban players this way
         if #args < 2 then 
             -- Not valid enough num of arguments 
-            TriggerClientEvent('chatMessage', source, "^5[^1Badger-Anticheat^5] ^1ERROR: You have supplied invalid amount of arguments... " ..
-                "^2Proper Usage: /acban <id> <reason>");
+            TriggerClientEvent('chatMessage', source, "^5[^1FastCity-Anticheat^5] ^1ERROR: Sie haben eine ungültige Anzahl von Argumenten angegeben... " ..
+                "^2Richtige Verwendung: /acban <id> <reason>");
             return;
         end
         local id = args[1]
@@ -349,10 +349,10 @@ RegisterCommand("acban", function(source, args, raw)
                 'GameLicense: **' .. gameLicense .. '**\n' ..
                 'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
                 'Discord UID: **' .. discord:gsub('discord:', '') .. '**\n');
-            DropPlayer(id, "[Badger-Anticheat]: Banned by player " .. GetPlayerName(src) .. " for reason: " .. reason);
+            DropPlayer(id, "[FastCity-Anticheat]: Banned by player " .. GetPlayerName(src) .. " for reason: " .. reason);
         else 
             -- Not a valid player supplied 
-            TriggerClientEvent('chatMessage', source, "^5[^1Badger-Anticheat^5] ^1ERROR: There is no valid player with that ID online... " ..
+            TriggerClientEvent('chatMessage', source, "^5[^1FastCity-Anticheat^5] ^1ERROR: There is no valid player with that ID online... " ..
                 "^2Proper Usage: /acban <id> <reason>");
         end
     end
@@ -390,7 +390,7 @@ AddEventHandler("Anticheat:NoClip", function(distance)
                 'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
                 'Discord UID: **' .. discord:gsub('discord:', '') .. '**\n');
             end
-            DropPlayer(id, "[Badger-Anticheat]: " .. Config.Messages.NoClipTriggered)
+            DropPlayer(id, "[FastCity-Anticheat]: " .. Config.Messages.NoClipTriggered)
         end 
         Wait(6000);
         counter[ids.steam] = counter[ids.steam] - 1;
@@ -417,7 +417,7 @@ function IsLegal(entity)
             end 
         end
         for i=1, #Config.BlacklistedModels do 
-            local hashkey = tonumber(Config.BlacklistedModels[i]) ~= nil and tonumber(Config.BlacklistedModels[i]) or GetHashKey(Config.BlacklistedModels[i]) 
+            local hashkey = tonumber(Config.BlacklistedModels[i]) ~= Null und Zahl(Config.BlacklistedModels[i]) or GetHashKey(Config.BlacklistedModels[i]) 
             if (hashkey == model) then
                 if (GetEntityPopulationType(entity) ~= 7) then
                     return Config.BlacklistedModels[i];
@@ -538,14 +538,14 @@ AddEventHandler('chatMessage', function(source, name, msg)
     if (name ~= realName) then 
         if Config.BanComponents.AntiFakeMessage then 
             BanPlayer(id, "[FastCity-Anticheat]: " .. Config.Messages.ChatMessageTriggered)
-            sendToDisc("[BANNED] CONFIRMED HACKER (Fake Chat Message): _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
+            sendToDisc("[BANNED] BESTÄTIGT HACKER (gefälschte Chat-Nachricht) : _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
             'Steam: **' .. steam .. '**\n' ..
             'GameLicense: **' .. gameLicense .. '**\n' ..
             'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
             'Discord UID: **' .. discord:gsub('discord:', '') .. '**\n'
             .. 'Tried to say: `' .. msg .. '` with name `' .. name .. '`');
         else 
-            sendToDisc("CONFIRMED HACKER [Fake Chat Message]: _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
+            sendToDisc("BESTÄTIGT HACKER [Fake Chat-Nachricht]: _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
             'Steam: **' .. steam .. '**\n' ..
             'GameLicense: **' .. gameLicense .. '**\n' ..
             'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
@@ -593,7 +593,7 @@ for i=1, #BlacklistedEvents, 1 do
             'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
             'Discord UID: **' .. discord:gsub('discord:', '') .. '**\n');
         else 
-            sendToDisc("CONFIRMED HACKER [Tried executing `".. BlacklistedEvents[i] .."`]: _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
+            sendToDisc("BESTÄTIGT HACKER [Ausführung versucht  `".. BlacklistedEvents[i] .."`]: _[" .. tostring(id) .. "] " .. GetPlayerName(id) .. "_", 
             'Steam: **' .. steam .. '**\n' ..
             'GameLicense: **' .. gameLicense .. '**\n' ..
             'Discord Tag: **<@' .. discord:gsub('discord:', '') .. '>**\n' ..
@@ -667,7 +667,7 @@ function sendToDisc(title, message, footer)
     embed = {
         {
             ["color"] = 16711680, -- GREEN = 65280 --- RED = 16711680
-            ["title"] = "**".. title .."**",
+            ["title"] = "**".. FastCity .."**",
             ["description"] = "" .. message ..  "",
             ["footer"] = {
                 ["text"] = footer,
@@ -685,21 +685,21 @@ AddEventHandler("clearPedTasksEvent", function(sender, data)
     if Config.Components.AntiCancelAnimations then 
     CancelEvent()
     end 
-    -- Stops other players kicking people out of cars
+    -- Verhindert, dass andere Spieler Leute aus Autos werfen
 end)
 
 AddEventHandler('removeWeaponEvent', function(sender, data)
     if Config.Components.AntiRemoveOtherPlayersWeapons then 
         CancelEvent()
     end 
-    -- Would only affect if you have scripts removing other people's weapons. (stops players removing other players weapons)
+    -- Würde sich nur auswirken, wenn Sie Skripte haben, die die Waffen anderer Leute entfernen. (verhindert, dass Spieler die Waffen anderer Spieler entfernen)
 end)
 
 AddEventHandler('giveWeaponEvent', function(sender, data)
     if Config.Components.StopOtherPlayersGivingEachOtherWeapons then 
     CancelEvent()
     end 
-    -- Stops other players giving people weapons (doesn't affect single people unless you have give weapons on menus and etc.)
+    -- Verhindert, dass andere Spieler Personen Waffen geben (betrifft keine einzelnen Personen, es sei denn, Sie haben Waffen in Menüs usw.) 
 end)
 
 
@@ -724,7 +724,7 @@ CreateThread(function()
             end
         end
         if added then
-            print('Modified 1 or more resources. It is required to restart your server so these changes can now take place.')
+            print('1 oder mehrere Ressourcen geändert. Es ist erforderlich, Ihren Server neu zu starten, damit diese Änderungen jetzt vorgenommen werden können.')
         end
     else 
         Wait(1000)
@@ -746,7 +746,7 @@ CreateThread(function()
             end
         end
         if added then
-            print('[FastCity-AC] Uninstall Mod-Menu-Checks | Modified 1 or more resources. It is required to restart your server so these changes can now take place.')
+            print('[FastCity-CL] Mod-Menü-Checks deinstallieren | 1 oder mehrere Ressourcen geändert. Es ist erforderlich, Ihren Server neu zu starten, damit diese Änderungen jetzt vorgenommen werden können. ')
         end
     end
 end)
