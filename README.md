@@ -1,49 +1,42 @@
-# Further documentation for this resource has been moved to: https://docs.badger.store/fivem-misc.-scripts/badger-anticheat
+## GamesLigaTv Entwickler-Community [Discord]
+[![Entwickler-Discord](https://discord.com/api/guilds/337790398464524288/widget.png?style=banner4)](https://discord.com/invite/5DSbspA)
 
-## Jared's Developer Community [Discord]
-[![Developer Discord](https://discordapp.com/api/guilds/597445834153525298/widget.png?style=banner4)](https://discord.com/invite/WjB5VFz)
+##FastCity-Anticheat
+FastCity's Official Anticheat [Code-Inspirationen von GamesLigaTv auf GitHub]
 
-## Badger-Anticheat
-Badger's Official Anticheat [code inspirations from DevLanceGood and Bluethefurry on GitHub]
+## Was kann es aufhalten?
 
-## What it can stop?
+· Stoppt Modder Noclip
 
-· Stops modder noclip
+· Stoppt das Zuschauen der Modder
 
-· Stops modder spectating
+· Stoppt gefälschte Chatnachrichten von Moddern
 
-· Stops modder fake chat messages
+· Verhindert, dass Modder-Peds gespawnt werden
 
-· Stops modder peds from being spawned
+· Stoppt die MEISTEN Modder-Requisiten Es liegt in Ihrem Ermessen, wer herauszufinden. Als guter Gedankengang ist es normalerweise der Benutzer, der nicht in Ihrer Zwietracht ist oder eine geringe Spielzeit auf Ihrem Server hat.)
 
-· Stops MOST modder props (NOTE: Sometimes a regular player may get kicked or caught when the script scans for props since the modder spawned it on them. However, one of the caught players when this happens should be the confirmed modder, but it is up to your discretion to figure out who. As a good train of thought, it's usually the user who is not in your discord or has a low playtime on your server.)
+## Zusammenfassung
 
-## Summary
+FastCity-Anticheat kann Modder beim Nocliping, beim Zuschauen und sogar beim Fälschen von Chatnachrichten erwischen. FastCity-Anticheat wird auch das Spawnen von Peds von Moddern stoppen. Mach dir keine Sorge! KI sind sicher, aber FastCity-Anticheat verhindert nur, dass die Pädophilen-Modder spawnen. BFastCity-Anticheat verhindert auch, dass Requisiten auf der Blacklist über die Blacklist-Liste `Config` gespawnt werden. Wenn FastCity-Anticheat den Modder, der die Requisite erzeugt hat, erfolgreich finden kann, tritt er sie dann und protokolliert dies über einen Discord-Webhook. Der Code ist recht einfach, aber effektiv. Ich habe gesehen, dass es in den Foren keine wirklich guten Anticheats gab, also dachte ich, ich sollte eins zusammenstellen.
 
-Badger-Anticheat can catch modders noclipping, spectating, and even faking chat messages. Badger-Anticheat also will stop the spawning of peds from modders. Don't worry! AI are safe, but Badger-Anticheat just prevents the peds modders spawn from being spawned. Badger-Anticheat also stops blacklisted props from being spawned via the `Config` blacklisted list. If Badger-Anticheat can successfully find the modder who spawned the prop, it then kicks them and logs this via a Discord webhook. The code is quite simple, yet effective. I saw there was no real good anticheats on the forums, so I thought I should put one together. Some of the code comes from other developers, therefore I made sure to credit them within the code too. DevLanceGood is one of these developers, as well as Bluethefurry. I have linked their GitHubs below.
 
-https://github.com/DevLanceGood
-
-https://github.com/Blumlaut
-
-## Commands
-Currenty there are no commands for this anticheat :(
+##Befehle
+Derzeit gibt es keine Befehle für dieses Anticheat :(
 
 ## Screenshots
 
-#### NOTE: These are not actual modders. These are friends of mine who helped test out the anticheat. We used a server-sided resource that mimicked a mod menu in order to thoroughly test to get these results. Upon putting the anticheat on our server, we caught a modder within the first 5 minutes of testing. Ironically he tried spectating whilst we were testing it. He got banned shortly after... lol
+![Einen Modder-Noclipping abfangen](.png)
 
-![Catching a modder noclipping](https://i.gyazo.com/d1907105b1d065d6ed878366b90620b0.png)
+![Einen Modder beim Zuschauen erwischen](.png)
 
-![Catching a modder spectating](https://i.gyazo.com/19d929e023970ae53ad3e7c7246c71b0.png)
+![Einen Modder beim Fälschen einer Chatnachricht erwischen](.png)
 
-![Catching a modder faking a chat message](https://i.gyazo.com/4a58604bcc0d72f378a5f4e42d9e65bf.png)
+## Berechtigungen
 
-## Permissions
+`Anticheat.Bypass` - umgeht die Anticheat-Prüfungen. Sie MÜSSEN dies Mitarbeitern geben, die über NoClip- und Zuschauerberechtigungen verfügen.
 
-`Anticheat.Bypass` - bypasses the Anticheat checks. You MUST give this to Staff who have NoClip and Spectating powers.
-
-## Configuration
+## Aufbau 
 
 ```
 Config = {
@@ -140,4 +133,4 @@ Config = {
 }
 ```
 ## Download
-https://github.com/JaredScar/Badger-Anticheat/archive/master.zip
+https://github.com/GamesLigaTv/FastCity-Anticheat/archive/master.zip
