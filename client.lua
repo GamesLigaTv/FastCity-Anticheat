@@ -56,7 +56,7 @@ if Config.Components.AntiCommands then
                         string.lower(command.name) == string.lower('-' .. blacklistedCommand) or
                         string.lower(command.name) == string.lower('/' .. blacklistedCommand)) then
                         TriggerServerEvent("Anticheat:Modder", "CONFIRMED HACKER [Lua Injection]", 
-                            "[Badger-Anticheat]: " .. Config.Messages.CommandsTriggered:gsub("{COMMAND}", blacklistedCommand));
+                            "[FastCity-Anticheat]: " .. Config.Messages.CommandsTriggered:gsub("{COMMAND}", blacklistedCommand));
                     end
                 end
             end
@@ -82,13 +82,13 @@ end)
 if Config.Components.AntiESX then 
     RegisterNetEvent('esx:getSharedObject')
     AddEventHandler('esx:getSharedObject', function()
-        TriggerServerEvent("Anticheat:ModderESX", "CONFIRMED HACKER [Getting ESX object via client code]", 
-                            "[Badger-Anticheat]: " .. Config.Messages.ESXTriggered);
+        TriggerServerEvent("Anticheat:ModderESX", "BESTÄTIGT HACKER [ESX-Objekt über Client-Code abrufen]", 
+                            "[FastCity-Anticheat]: " .. Config.Messages.ESXTriggered);
     end)
 end
  
 if Config.Components.AntiKeys then 
-    -- Prevent keys from being Released 
+    -- Verhindern, dass Schlüssel freigegeben werden 
     Citizen.CreateThread(function()
         while true do 
             Wait(0);
@@ -102,11 +102,11 @@ if Config.Components.AntiKeys then
                         -- They are using a blacklisted key 
                         TriggerServerEvent('Anticheat:ScreenshotSubmit');
                         if Config.KickForKeys then 
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", true);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", true);
                         else
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", false);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", false);
                         end
                     end
                 elseif #keyCombo == 2 then 
@@ -116,13 +116,13 @@ if Config.Components.AntiKeys then
                         -- They are using blacklisted keys 
                         TriggerServerEvent('Anticheat:ScreenshotSubmit');
                         if Config.KickForKeys then 
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", true);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", true);
                         else
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", false);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", false);
                         end
-                        Wait(20000); -- Wait 20 seconds 
+                        Wait(20000); -- Warte 20 Sekunden 
                     end
                 elseif #keyCombo == 3 then 
                     local key1 = keyCombo[1];
@@ -133,14 +133,14 @@ if Config.Components.AntiKeys then
                         -- They are using blacklisted keys 
                         TriggerServerEvent('Anticheat:ScreenshotSubmit');
                         if Config.KickForKeys then 
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", true);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", true);
                         else
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", false);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", false);
                         end
                     end
-                    Wait(20000); -- Wait 20 seconds 
+                    Wait(20000); -- Warte 20 Sekunden 
                 elseif #keyCombo == 4 then 
                     local key1 = keyCombo[1];
                     local key2 = keyCombo[2];
@@ -151,14 +151,14 @@ if Config.Components.AntiKeys then
                         -- They are using blacklisted keys 
                         TriggerServerEvent('Anticheat:ScreenshotSubmit');
                         if Config.KickForKeys then 
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", true);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? Dumme Arsch hacker", true);
                         else
-                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (Probably) [Key Press: `" .. keyStr ..
-                                "`]", "Why you opening a mod menu? Stoopid ass hoe", false);
+                            TriggerServerEvent("Anticheat:ModderNoKick", "HACKER (wahrscheinlich) [Tastendruck: `" .. keyStr ..
+                                "`]", "Warum öffnest du ein Mod-Menü? dicke Arsch hacke", false);
                         end
                     end
-                    Wait(20000); -- Wait 20 seconds 
+                    Wait(20000); -- Warte 20 Sekunden
                 end
             end
         end
@@ -193,12 +193,12 @@ RegisterNetEvent('Anticheat:CheckStaffReturn')
 AddEventHandler('Anticheat:CheckStaffReturn', function(state)
     isStaff = state;
 end)
--- prevent infinite ammo, godmode, invisibility and ped speed hacks 
--- Props to Anticheese Anticheat for this: [https://github.com/Bluethefurry]
+-- Verhindere unendliche Munition, Godmode, Unsichtbarkeit und Ped Speed Hacks  
+-- Requisiten, um Anti Cheat für diese: [https://github.com/GamesLigaTv]
 if Config.Components.AntiCheat then
     Citizen.CreateThread(function()
-        Wait(10000); -- Wait 10 seconds
-        TriggerServerEvent('Anticheat:CheckStaff');
+        Wait(10000); -- Warte 10 Sekunden
+        TriggerServerEvent('Anticheat:CheckMitarbeiter');
         while true do
 		Citizen.Wait(1)
             if not (isStaff) then                
@@ -220,10 +220,10 @@ if Config.Components.AntiCheat then
 end
 -- End props 
 --[[]]--
--- Props to Anticheese Anticheat for this: [https://github.com/Bluethefurry]
+-- Props to Anticheese Anticheat for this: [https://github.com/GamesLigaTv]
 if Config.Components.AntiNoclip then
     Citizen.CreateThread(function()
-        Citizen.Wait(10000) -- Wait 10 seconds
+        Citizen.Wait(10000) -- Warte 10 Sekunden
         while true do
             Citizen.Wait(0)
             local ped = PlayerPedId()
@@ -234,7 +234,7 @@ if Config.Components.AntiNoclip then
             Wait(3000) -- wait 3 seconds and check again
 
             local newx,newy,newz = table.unpack(GetEntityCoords(ped,true))
-            local newPed = PlayerPedId() -- make sure the peds are still the same, otherwise the player probably respawned
+            local newPed = PlayerPedId() -- vergewissern Sie sich, dass die Peds immer noch die gleichen sind, sonst ist der Spieler wahrscheinlich respawned
             if GetDistanceBetweenCoords(posx,posy,posz, newx,newy,newz) > 200 and still == IsPedStill(ped) and vel == GetEntitySpeed(ped) and ped == newPed then
                 TriggerServerEvent("Anticheat:NoClip", GetDistanceBetweenCoords(posx,posy,posz, newx,newy,newz))
             end
@@ -250,7 +250,7 @@ Citizen.CreateThread(function()
         Wait(3000);
         local ped = NetworkIsInSpectatorMode()
         if ped == 1 then
-            TriggerServerEvent("Anticheat:SpectateTrigger", "[Badger-Anticheat]: " .. Config.Messages.SpectateTriggered);
+            TriggerServerEvent("Anticheat:Zuschauertrigger", "[FastCity-Anticheat]: " .. Config.Messages.SpectateTriggered);
         end
     end
 end)
@@ -262,7 +262,7 @@ local function collectAndSendResourceList()
 		Wait(500)
 	end
 	Wait(5000)
-    TriggerServerEvent("ANTICHEAT:CHECKRESOURCES", resourceList)
+    TriggerServerEvent("ANTICHEAT:RESSOURCEN PRÜFEN", resourceList)
 end
 if Config.Components.StopUnauthorizedResources then 
 CreateThread(function()
