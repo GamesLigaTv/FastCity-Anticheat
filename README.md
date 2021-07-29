@@ -133,4 +133,4 @@ Config = {
 }
 ```
 ## Download
-https://github.com/GamesLigaTv/FastCity-Anticheat/archive/master.zip
+https://github.com/GamesLigaTv/FastCity-Anticheat/archive/refs/heads/main.zip
