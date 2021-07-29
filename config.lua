@@ -2,18 +2,18 @@ Config = {
     WhitelistPedModels = {'S_M_M_TRUCKER_01', 'MP_M_WAREMECH_01'},
     NoClipTriggerCount = 3,
     Components = {
-         AntiCheat = true, --AntiInvincible, AntiInfiniteAmmo, etc.
+         AntiCheat = true, --AntiInvincible, AntiInfiniteAmmo usw etc.
          AntiSpectate = true,
          AntiNoclip = true, 
          AntiCommands = true,
          AntiKeys = true, 
          AntiESX = true,
          AntiWeapons = true,
-         AntiRemoveOtherPlayersWeapons = true, -- Stops players removing other players weapons. 
-         AntiCancelAnimations = true, -- Stops other players cancelling other people's animations (kicking people out of cars etc.)
-         StopOtherPlayersGivingEachOtherWeapons = true, -- Stops other players giving other people weapons (If you have an admin menu to give weapons this may be an issue. Giving weapons with esx inventories or etc will not cause any issues!)
-         ModMenuChecks = true, -- (READ IMPORTANT) Will check in your resources for any injected code being variables/functions that has been added to our detection lists! Don't forget to also enable it on the client script! In acloader.lua! Will add to every resource so please do not change the AntiCheat Name It must stay as the name it has.  
-         StopUnauthorizedResources = true, -- Will check for resources that have not been allowed by the server! (Common with Eulen tick box menu loading options)
+         AntiRemoveOtherPlayersWeapons = true, -- Verhindert, dass Spieler die Waffen anderer Spieler entfernen. 
+         AntiCancelAnimations = true, -- Verhindert, dass andere Spieler anderen Personen Waffen geben (Wenn Sie ein Admin-Menü haben, um Waffen zu geben, kann dies ein Problem sein. Das Geben von Waffen mit Esx-Inventaren usw. verursacht keine Probleme!)
+         StopOtherPlayersGivingEachOtherWeapons = true, -- Verhindert, dass andere Spieler anderen Personen Waffen geben (Wenn Sie ein Admin-Menü haben, um Waffen zu geben, kann dies ein Problem sein. Das Geben von Waffen mit Esx-Inventaren usw. verursacht keine Probleme!)
+         ModMenuChecks = true, -- (LESEN SIE WICHTIG) Überprüfen Sie Ihre Ressourcen auf injizierten Code, der Variablen/Funktionen ist und zu unseren Erkennungslisten hinzugefügt wurde! Vergessen Sie nicht, es auch im Client-Skript zu aktivieren! Auf acloader.lua! Wird zu jeder Ressource hinzugefügt, also bitte den AntiCheat-Namen nicht ändern. Er muss so bleiben, wie er hat.  
+         StopUnauthorizedResources = true, -- Wird nach Ressourcen suchen, die vom Server nicht zugelassen wurden! (Gemeinsam mit Eulen-Kästchen-Menü-Ladeoptionen) 
     },
     BanComponents = {
         AntiSpectate = true,
@@ -22,27 +22,27 @@ Config = {
         AntiESX = true,
         AntiFakeMessage = true,
         AntiBlacklistedEvent = true,
-        AntiWeapons = false, -- KEEP IN MIND: Modders can give other players weapons
+        AntiWeapons = false, -- BEACHTEN: Modder können anderen Spielern Waffen geben 
     },
     Messages = {
-        NoClipTriggered = "Our anticheat caught you noclipping... You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        ChatMessageTriggered = "Our anticheat caught you faking a chat message... You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        BlacklistedEventTriggered = "Our anticheat caught you triggered a blacklisted event [{EVENT}]. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        BlacklistedEntity = "Our anticheat caught you creating a blacklisted entity [{ENTITY}]. You have been kicked. You may join back, but may be banned under staff's discretion.",
-        UnauthorizedResources = "Our anticheat caught you with an unauthorized resource [{RESOURCE}]. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        ProhibitedVariables = "Our anticheat caught you with a prohibited variable [{VARIABLE}]. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        CommandsTriggered = "Our anticheat caught you with a blacklisted command [{COMMAND}]. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        ESXTriggered = "Our anticheat caught you triggering ESX. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        SpectateTriggered = "Our anticheat caught you spectating somebody whilst not being staff. You have been banned. You can apply for unban by providing your ban ID in your server ticket.",
-        BlacklistedWeaponTriggered = "Our anticheat caught you using a blacklisted weapon [{WEAPON}]. You have been kicked for this...",
+        NoClipTriggered = "Unser Anti-Cheat hat dich beim Noclipping erwischt... Du wurdest gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        ChatMessageTriggered = "Unser Anticheat hat Sie dabei erwischt, wie Sie eine Chat-Nachricht gefälscht haben... Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        BlacklistedEventTriggered = "Unser Anti-Cheat hat dich erwischt und ein Ereignis auf der schwarzen Liste ausgelöst [{EVENT}]. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        BlacklistedEntity = "Unser Anti-Cheat hat Sie dabei erwischt, wie Sie eine auf die schwarze Liste gesetzte Entität [{ENTITY}] erstellt haben. Du wurdest getreten. Sie können wieder Mitglied werden, können jedoch nach Ermessen des Personals gesperrt werden.",
+        UnauthorizedResources = "Unser Anti-Cheat hat Sie mit einer nicht autorisierten Ressource [{RESOURCE}] erwischt. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben. ",
+        ProhibitedVariables = "Unser Anti-Cheat hat dich mit einer verbotenen Variablen [{VARIABLE}] erwischt. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        CommandsTriggered = "Unser Anti-Cheat hat dich mit einem schwarzen Befehl [{COMMAND}] erwischt. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        ESXTriggered = "Unser Anti-Cheat hat Sie beim Auslösen von ESX erwischt. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        SpectateTriggered = "Unser Anti-Cheat hat Sie dabei erwischt, wie Sie jemanden beobachtet haben, während Sie kein Mitarbeiter sind. Sie wurden gesperrt. Sie können die Sperrung beantragen, indem Sie Ihre Sperr-ID in Ihrem Server-Ticket angeben.",
+        BlacklistedWeaponTriggered = "Unser Anti-Cheat hat dich mit einer auf der schwarzen Liste stehenden Waffe [{WEAPON}] erwischt. Dafür wurdest du gekickt...",
     },
     KickForKeys = false, 
     BlacklistedKeys = { 
-        {{121}, "Insert Key"}, -- Insert Key 
+        {{121}, "Insert Key"}, -- Schlüssel einfügen 
         {{37, 44}, "Tab + Q Keys"}, -- Tab + Q key 
         {{47, 21}, "Shift + G Keys"}, -- Shift + G key  
-        {{117}, "Numpad 7 Key"}, -- Lynx Evo Menu 
-        {{214}, "Delete Key"}, -- Delete Menu 
+        {{117}, "Numpad 7 Key"}, -- Menü
+        {{214}, "Delete Key"}, -- Menü löschen 
     },
     BlacklistedWeapons = {
         "WEAPON_APPISTOL",
