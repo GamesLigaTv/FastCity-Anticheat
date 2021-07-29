@@ -18,7 +18,7 @@ FastCity's Official Anticheat [Code-Inspirationen von GamesLigaTv auf GitHub]
 
 ## Zusammenfassung
 
-FastCity-Anticheat kann Modder beim Nocliping, beim Zuschauen und sogar beim Fälschen von Chatnachrichten erwischen. FastCity-Anticheat wird auch das Spawnen von Peds von Moddern stoppen. Mach dir keine Sorge! KI sind sicher, aber FastCity-Anticheat verhindert nur, dass die Pädophilen-Modder spawnen. BFastCity-Anticheat verhindert auch, dass Requisiten auf der Blacklist über die Blacklist-Liste `Config` gespawnt werden. Wenn FastCity-Anticheat den Modder, der die Requisite erzeugt hat, erfolgreich finden kann, tritt er sie dann und protokolliert dies über einen Discord-Webhook. Der Code ist recht einfach, aber effektiv. Ich habe gesehen, dass es in den Foren keine wirklich guten Anticheats gab, also dachte ich, ich sollte eins zusammenstellen.
+FastCity-Anticheat kann Modder beim Nocliping, beim Zuschauen und sogar beim Fälschen von Chatnachrichten erwischen. FastCity-Anticheat wird auch das Spawnen von Peds von Moddern stoppen. Mach dir keine Sorge! KI sind sicher, aber FastCity-Anticheat verhindert nur, dass die Pädophilen-Modder spawnen. FastCity-Anticheat verhindert auch, dass Requisiten auf der Blacklist über die Blacklist-Liste `Config` gespawnt werden. Wenn FastCity-Anticheat den Modder, der die Requisite erzeugt hat, erfolgreich finden kann, tritt er sie dann und protokolliert dies über einen Discord-Webhook. Der Code ist recht einfach, aber effektiv. Ich habe gesehen, dass es in den Foren keine wirklich guten Anticheats gab, also dachte ich, ich sollte eins zusammenstellen.
 
 
 ##Befehle
